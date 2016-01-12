@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="../styles.css" ?>
+<svg version="1.1" id="XMLID_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 13.9263" enable-background="new 0 0 24 13.9263" xml:space="preserve">
+<g class="svg-icon svg-icon-glossary">
+  <path d="M6.2427,9.1562H3.3296l-0.5122,2.2085H0L3.1694,0.9604h3.3291L9.668,11.3647H6.7549L6.2427,9.1562z
+     M5.7466,7.0268L5.5703,6.3066C5.3145,5.3144,5.0581,4.0503,4.8022,3.0097H4.7378c-0.2236,1.0562-0.48,2.3047-0.7363,3.2969
+    L3.8257,7.0268H5.7466z"/>
+  <path d="M13.5015,0h1.7607l-2.8169,13.9263h-1.7607L13.5015,0z"/>
+  <path d="M16.3169,9.7007l4.2578-6.4351h-3.8418V0.9604h7.2349v1.6651l-4.2574,6.4341H24v2.3051h-7.6831V9.7007z"/>
+</g>
+</svg>

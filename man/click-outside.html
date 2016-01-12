@@ -1,0 +1,565 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
+        <title>click-outside | d3-utils</title>
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+  
+    
+    <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+    
+  
+    
+    <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+    
+  
+    
+    <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+    
+  
+    
+    <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-zambezi-docs/styles.css">
+    
+  
+  
+
+        
+  
+  
+  <link rel="next" href="../man/events-dispatch.html" />
+  
+  
+  <link rel="prev" href="../man/append-from-template.html" />
+  
+
+        
+    </head>
+    <body>
+        
+        
+<div class="book" data-level="2" data-chapter-title="click-outside" data-filepath="man/click-outside.md" data-basepath=".." data-revision="Tue Jan 12 2016 02:42:25 GMT+0000 (GMT Standard Time)">
+  
+
+<nav class="book-summary" role="navigation">
+  <ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+  
+    <li class="chapter chapter-root"
+        data-level="0"
+        
+          data-path="index.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="Introduction" href="../index.html">
+        
+            Introduction
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="1"
+        
+          data-path="man/append-from-template.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="append-from-template" href="../man/append-from-template.html">
+        
+            append-from-template
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter active chapter-root"
+        data-level="2"
+        
+          data-path="man/click-outside.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="click-outside" href="../man/click-outside.html">
+        
+            click-outside
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="3"
+        >
+      
+        <span class="chapter-title" data-title="Events">Events</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="3.1"
+        
+          data-path="man/events-dispatch.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="dispatch" href="../man/events-dispatch.html">
+        
+            dispatch
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="3.2"
+        
+          data-path="man/events-live.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="live" href="../man/events-live.html">
+        
+            live
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="4"
+        >
+      
+        <span class="chapter-title" data-title="Formatters">Formatters</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="4.1"
+        
+          data-path="man/formatters-empty-if-undefined.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="empty-if-undefined" href="../man/formatters-empty-if-undefined.html">
+        
+            empty-if-undefined
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="5"
+        
+          data-path="man/green-thread-trampoline.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="green-thread-trampoline" href="../man/green-thread-trampoline.html">
+        
+            green-thread-trampoline
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="6"
+        >
+      
+        <span class="chapter-title" data-title="HTML">HTML</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="6.1"
+        
+          data-path="man/html-clamp.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="clamp" href="../man/html-clamp.html">
+        
+            clamp
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="6.2"
+        
+          data-path="man/html-paragraphs.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="paragraphs" href="../man/html-paragraphs.html">
+        
+            paragraphs
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="6.3"
+        
+          data-path="man/html-safe-update-input-value.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="safe-update-input-value" href="../man/html-safe-update-input-value.html">
+        
+            safe-update-input-value
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="6.4"
+        
+          data-path="man/html-simple-keyboard-input-behaviour.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="simple-keyboard-input-behaviour" href="../man/html-simple-keyboard-input-behaviour.html">
+        
+            simple-keyboard-input-behaviour
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="7"
+        >
+      
+        <span class="chapter-title" data-title="Selection">Selection</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="7.1"
+        
+          data-path="man/selection-changed.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="changed" href="../man/selection-changed.html">
+        
+            changed
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="7.2"
+        
+          data-path="man/selection-notify-remove.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="notify-remove" href="../man/selection-notify-remove.html">
+        
+            notify-remove
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="8"
+        
+          data-path="man/set-content-if-empty.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="set-content-if-empty" href="../man/set-content-if-empty.html">
+        
+            set-content-if-empty
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="9"
+        
+          data-path="man/set-content-if-missing.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="set-content-if-missing" href="../man/set-content-if-missing.html">
+        
+            set-content-if-missing
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="10"
+        >
+      
+        <span class="chapter-title" data-title="SVG">SVG</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="10.1"
+        
+          data-path="man/svg-radial-tween.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="radial-tween" href="../man/svg-radial-tween.html">
+        
+            radial-tween
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="11"
+        
+          data-path="man/text-if-changed.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="text-if-changed" href="../man/text-if-changed.html">
+        
+            text-if-changed
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="12"
+        >
+      
+        <span class="chapter-title" data-title="Transitions">Transitions</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="12.1"
+        
+          data-path="man/transitions-per-index-delay.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="per-index-delay" href="../man/transitions-per-index-delay.html">
+        
+            per-index-delay
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+
+  </ul>
+</nav>
+
+  <div class="book-body">
+    
+
+<header class="book-header stack" role="navigation">
+  
+  <a href="" rel="summary"
+    title="Table of Contents" aria-label="Table of Contents"
+    class="summary-toggle panel"
+    onclick="return false">
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-summary.svg">
+        Table of Contents
+      </object>
+    </span>
+  </a>
+
+  
+  <div class="book-header-tools panel">
+    
+      
+  <a href="https://github.com/stadema/d3-utils/edit/master/man/click-outside.md" rel="edit"
+    title="Edit this page!" aria-label="Edit this page!"
+    
+    >
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-edit.svg">
+        Edit this page!
+      </object>
+    </span>
+  </a>
+
+    
+
+    
+  </div>
+</header>
+
+    <div class="body-inner">
+      <main class="page-wrapper" tabindex="-1" role="main">
+        <article class="page-inner">
+        
+        
+        
+          <section class="normal" id="section-">
+          
+            <h2 id="d3utilseventsclickoutside"><code>d3-utils/events/click-outside</code></h2>
+<p>Will dispatch one or more <code>clickoutside</code> event when an element is clicked and the element is not contained in one or more elements provided in the selection.</p>
+<pre><code>s.call(clickOutside()
+    .on(&apos;clickoutside&apos;, onClickOutside)
+)
+</code></pre>
+          
+          </section>
+        
+        
+        </article>
+      </main>
+    </div>
+
+    
+
+    
+      
+  <a href="../man/append-from-template.html" rel="prev"
+    title="Previous page: append-from-template" aria-label="Previous page: append-from-template"
+    class="navigation navigation-prev"
+    >
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-prev.svg">
+        Previous page: append-from-template
+      </object>
+    </span>
+  </a>
+
+    
+    
+      
+  <a href="../man/events-dispatch.html" rel="next"
+    title="Next page: dispatch" aria-label="Next page: dispatch"
+    class="navigation navigation-next"
+    >
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-next.svg">
+        Next page: dispatch
+      </object>
+    </span>
+  </a>
+
+    
+    
+
+<footer class="book-footer panel" role="contentinfo">
+  
+  <a href="" rel=""
+    title="Powered by Zambezi" aria-label="Powered by Zambezi"
+    class="powered-by no-t"
+    onclick="return false">
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-powered-by.svg">
+        Powered by Zambezi
+      </object>
+    </span>
+  </a>
+
+</footer>
+
+  </div>
+</div>
+
+        
+
+  
+  <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+  
+
+  
+  <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+  
+
+  
+  <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+  
+
+  
+  <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+  
+
+  
+  <script src="../gitbook/plugins/gitbook-plugin-zambezi-docs/book.js"></script>
+  
+
+
+        
+    </body>
+    
+</html>

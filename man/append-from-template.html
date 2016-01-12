@@ -1,0 +1,619 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        
+        <title>append-from-template | d3-utils</title>
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.2">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        
+  
+    
+    <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+    
+  
+    
+    <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+    
+  
+    
+    <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+    
+  
+    
+    <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-zambezi-docs/styles.css">
+    
+  
+  
+
+        
+  
+  
+  <link rel="next" href="../man/click-outside.html" />
+  
+  
+  <link rel="prev" href="../index.html" />
+  
+
+        
+    </head>
+    <body>
+        
+        
+<div class="book" data-level="1" data-chapter-title="append-from-template" data-filepath="man/append-from-template.md" data-basepath=".." data-revision="Tue Jan 12 2016 02:42:25 GMT+0000 (GMT Standard Time)">
+  
+
+<nav class="book-summary" role="navigation">
+  <ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+  
+    <li class="chapter chapter-root"
+        data-level="0"
+        
+          data-path="index.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="Introduction" href="../index.html">
+        
+            Introduction
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter active chapter-root"
+        data-level="1"
+        
+          data-path="man/append-from-template.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="append-from-template" href="../man/append-from-template.html">
+        
+            append-from-template
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="2"
+        
+          data-path="man/click-outside.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="click-outside" href="../man/click-outside.html">
+        
+            click-outside
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="3"
+        >
+      
+        <span class="chapter-title" data-title="Events">Events</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="3.1"
+        
+          data-path="man/events-dispatch.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="dispatch" href="../man/events-dispatch.html">
+        
+            dispatch
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="3.2"
+        
+          data-path="man/events-live.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="live" href="../man/events-live.html">
+        
+            live
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="4"
+        >
+      
+        <span class="chapter-title" data-title="Formatters">Formatters</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="4.1"
+        
+          data-path="man/formatters-empty-if-undefined.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="empty-if-undefined" href="../man/formatters-empty-if-undefined.html">
+        
+            empty-if-undefined
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="5"
+        
+          data-path="man/green-thread-trampoline.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="green-thread-trampoline" href="../man/green-thread-trampoline.html">
+        
+            green-thread-trampoline
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="6"
+        >
+      
+        <span class="chapter-title" data-title="HTML">HTML</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="6.1"
+        
+          data-path="man/html-clamp.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="clamp" href="../man/html-clamp.html">
+        
+            clamp
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="6.2"
+        
+          data-path="man/html-paragraphs.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="paragraphs" href="../man/html-paragraphs.html">
+        
+            paragraphs
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="6.3"
+        
+          data-path="man/html-safe-update-input-value.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="safe-update-input-value" href="../man/html-safe-update-input-value.html">
+        
+            safe-update-input-value
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="6.4"
+        
+          data-path="man/html-simple-keyboard-input-behaviour.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="simple-keyboard-input-behaviour" href="../man/html-simple-keyboard-input-behaviour.html">
+        
+            simple-keyboard-input-behaviour
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="7"
+        >
+      
+        <span class="chapter-title" data-title="Selection">Selection</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="7.1"
+        
+          data-path="man/selection-changed.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="changed" href="../man/selection-changed.html">
+        
+            changed
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter"
+        data-level="7.2"
+        
+          data-path="man/selection-notify-remove.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="notify-remove" href="../man/selection-notify-remove.html">
+        
+            notify-remove
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="8"
+        
+          data-path="man/set-content-if-empty.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="set-content-if-empty" href="../man/set-content-if-empty.html">
+        
+            set-content-if-empty
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="9"
+        
+          data-path="man/set-content-if-missing.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="set-content-if-missing" href="../man/set-content-if-missing.html">
+        
+            set-content-if-missing
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="10"
+        >
+      
+        <span class="chapter-title" data-title="SVG">SVG</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="10.1"
+        
+          data-path="man/svg-radial-tween.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="radial-tween" href="../man/svg-radial-tween.html">
+        
+            radial-tween
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+    <li class="chapter chapter-root"
+        data-level="11"
+        
+          data-path="man/text-if-changed.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="text-if-changed" href="../man/text-if-changed.html">
+        
+            text-if-changed
+          </a>
+      
+      
+    </li>
+  
+    <li class="chapter chapter-root chapter-list"
+        data-level="12"
+        >
+      
+        <span class="chapter-title" data-title="Transitions">Transitions</span>
+      
+      
+        <ul class="articles">
+          
+  
+    <li class="chapter"
+        data-level="12.1"
+        
+          data-path="man/transitions-per-index-delay.html"
+        >
+      
+        
+          <a class="chapter-title" data-title="per-index-delay" href="../man/transitions-per-index-delay.html">
+        
+            per-index-delay
+          </a>
+      
+      
+    </li>
+  
+
+        </ul>
+      
+    </li>
+  
+
+  </ul>
+</nav>
+
+  <div class="book-body">
+    
+
+<header class="book-header stack" role="navigation">
+  
+  <a href="" rel="summary"
+    title="Table of Contents" aria-label="Table of Contents"
+    class="summary-toggle panel"
+    onclick="return false">
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-summary.svg">
+        Table of Contents
+      </object>
+    </span>
+  </a>
+
+  
+  <div class="book-header-tools panel">
+    
+      
+  <a href="https://github.com/stadema/d3-utils/edit/master/man/append-from-template.md" rel="edit"
+    title="Edit this page!" aria-label="Edit this page!"
+    
+    >
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-edit.svg">
+        Edit this page!
+      </object>
+    </span>
+  </a>
+
+    
+
+    
+  </div>
+</header>
+
+    <div class="body-inner">
+      <main class="page-wrapper" tabindex="-1" role="main">
+        <article class="page-inner">
+        
+        
+        
+          <section class="normal" id="section-">
+          
+            <h2 id="appendfromtemplate-d3utilsappendfromtemplate">append-from-template <code>d3-utils/append-from-template</code></h2>
+<p>The d3 selection.append(<em>name</em>) operator only supports passing it the name of a tag.
+This can make it very tiresome to build complex html structures.</p>
+<p>With <code>append-from-template</code> you can create a function from an HTML snippet and use it with the D3 <code>selection.select</code> operator to append a node with that markup:</p>
+<p>So, to append a node with the following structure in &quot;native&quot; D3,</p>
+<pre><code>&lt;section class=&quot;template&quot;&gt;&lt;h2&gt;hello&lt;/h2&gt;&lt;a classed=&quot;home-link&quot; href=&quot;/home&quot;&gt;home&lt;/a&gt;&lt;/section&gt;
+</code></pre><p>You&apos;d need to do</p>
+<pre><code>var section = selection.append(&quot;section&quot;).classed(&quot;template&quot;, true)
+section.append(&quot;h2&quot;)
+    .text(&quot;hello&quot;)
+
+section.append(&quot;a&quot;)
+    .attr(&quot;href&quot;, &quot;/home&quot;)
+    .text(&quot;home&quot;)
+    .classed(&quot;home-link&quot;, true)
+
+// etc. etc.
+</code></pre><p>Using <code>append-from-template</code> you can do:</p>
+<pre><code>var append = appendFromTemplate(&apos;&lt;section class=&quot;template&quot;&gt;&lt;h2&gt;hello&lt;/h2&gt;&lt;a classed=&quot;home-link&quot; href=&quot;/home&quot;&gt;home&lt;/a&gt;&lt;/section&gt;&apos;)
+section.select(append)
+</code></pre><p>Each generated node is new so you can use it for creating multiple &quot;renderers&quot;</p>
+<pre><code>var append = appendFromTemplate(yourRendererMarkup)
+d3.select(&quot;ul&quot;)
+  .selectAll(&quot;.option&quot;)
+  .data(yourData)
+  .enter()
+  .select(append)
+</code></pre><p>The <code>append-from-template</code> is available as an AMD module:</p>
+<pre><code>require(
+  [
+    &quot;d3-utils/append-from-template&quot;
+  , &quot;text!./renderer-template.html&quot;
+  ]
+, function(appendFromTemplate, template) {
+    var append = appendFromTemplate(template)
+
+    // ...
+
+    d3.select(&quot;#target&quot;).selectAll(&quot;.element&quot;)
+      .data(someData)
+      .enter()
+      .select(append)
+  }
+)
+</code></pre><p>It can also be used as a plugin by passing the path to the template file directly</p>
+<pre><code>require(
+  [
+    &quot;d3-utils/append-from-template!./renderer-template.html&quot;
+  ]
+, function(append) {
+
+    // ...
+
+    d3.select(&quot;#target&quot;).selectAll(&quot;.element&quot;)
+      .data(someData)
+      .enter()
+      .select(append)
+  }
+)
+</code></pre>
+          
+          </section>
+        
+        
+        </article>
+      </main>
+    </div>
+
+    
+
+    
+      
+  <a href="../index.html" rel="prev"
+    title="Previous page: Introduction" aria-label="Previous page: Introduction"
+    class="navigation navigation-prev"
+    >
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-prev.svg">
+        Previous page: Introduction
+      </object>
+    </span>
+  </a>
+
+    
+    
+      
+  <a href="../man/click-outside.html" rel="next"
+    title="Next page: click-outside" aria-label="Next page: click-outside"
+    class="navigation navigation-next"
+    >
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-next.svg">
+        Next page: click-outside
+      </object>
+    </span>
+  </a>
+
+    
+    
+
+<footer class="book-footer panel" role="contentinfo">
+  
+  <a href="" rel=""
+    title="Powered by Zambezi" aria-label="Powered by Zambezi"
+    class="powered-by no-t"
+    onclick="return false">
+    <span class="button-inner">
+      <object type="image/svg+xml" data="../gitbook/plugins/gitbook-plugin-zambezi-docs/images/icon-powered-by.svg">
+        Powered by Zambezi
+      </object>
+    </span>
+  </a>
+
+</footer>
+
+  </div>
+</div>
+
+        
+
+  
+  <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+  
+
+  
+  <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+  
+
+  
+  <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+  
+
+  
+  <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+  
+
+  
+  <script src="../gitbook/plugins/gitbook-plugin-zambezi-docs/book.js"></script>
+  
+
+
+        
+    </body>
+    
+</html>

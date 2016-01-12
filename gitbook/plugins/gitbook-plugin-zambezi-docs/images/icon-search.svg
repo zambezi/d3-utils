@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="../styles.css" ?>
+<svg version="1.1" id="XMLID_2_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17.6465 18.4371" enable-background="new 0 0 17.6465 18.4371" xml:space="preserve">
+<g class="svg-icon svg-icon-search">
+  <path d="M6.4024,12.7994C2.8731,12.7994,0,9.9283,0,6.399C0,2.8702,2.8731,0,6.4024,0
+    c3.5273,0,6.3984,2.8702,6.3984,6.399C12.8008,9.9283,9.9297,12.7994,6.4024,12.7994z M6.4024,2.5694
+    c-2.1133,0-3.8321,1.7173-3.8321,3.8296c0,2.1128,1.7188,3.83,3.8321,3.83c2.1113,0,3.83-1.7172,3.83-3.83
+    C10.2324,4.2867,8.5137,2.5694,6.4024,2.5694z"/>
+  
+  <rect x="8.1205" y="12.6736" transform="matrix(0.7072 0.707 -0.707 0.7072 13.7251 -5.2234)" width="10.097" height="2.5708"/>
+</g>
+</svg>
