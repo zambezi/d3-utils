@@ -1,0 +1,17 @@
+{
+  "name": "d3-utils",
+  "version": "2.9.0",
+  "description": "Common utility functions to use with d3",
+  "devDependencies": {
+    "ez-doc": "github:zambezi/ez-doc",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "text": "^2.0.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git@github.com:zambezi/address.git"
+  },
+  "license": "MIT"
+}
