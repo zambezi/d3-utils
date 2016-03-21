@@ -1,5 +1,5 @@
 {
-  "name": "d3-utils",
+  "name": "@zambezi/d3-utils",
   "version": "2.9.0",
   "description": "Common utility functions to use with d3",
   "devDependencies": {
