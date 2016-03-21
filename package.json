@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git@github.com:zambezi/address.git"
+    "url": "https://git@github.com:zambezi/d3-utils.git"
   },
   "license": "MIT"
 }
