@@ -1,6 +1,6 @@
 {
   "name": "@zambezi/d3-utils",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "description": "Common utility functions to use with d3",
   "devDependencies": {
     "ez-doc": "github:zambezi/ez-doc",
