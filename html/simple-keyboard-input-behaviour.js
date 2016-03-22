@@ -2,8 +2,8 @@ define(
   [ 
     'd3' 
   , '../events/key-code-handler'
-  , 'fun/some-result'
-  , 'fun/batch'
+  , '@zambezi/fun/some-result'
+  , '@zambezi/fun/batch'
   ]
 , function(d3, keyCodeHandler, some, batch) {
     return function createSimpleKeyboardInputBehaviour() {

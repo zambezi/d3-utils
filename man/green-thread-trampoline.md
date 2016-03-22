@@ -10,7 +10,7 @@ require(
   [ 
     'd3'
   , 'underscore'
-  , 'fun/array/trampoline-merge-sort'
+  , '@zambezi/fun/array/trampoline-merge-sort'
   , 'd3-utils/green-thread-trampoline'
   ]
 , function(d3, _, sort, greenThread) {
@@ -37,7 +37,7 @@ require(
   [ 
     'd3'
   , 'underscore'
-  , 'fun/array/trampoline-merge-sort'
+  , '@zambezi/fun/array/trampoline-merge-sort'
   , 'd3-utils/green-thread-trampoline'
   ]
 , function(d3, _, sort, greenThread) {

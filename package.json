@@ -28,5 +28,8 @@
   "scripts": {
     "test": "karma start --single-run"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@zambezi/fun": "1.4.1"
+  }
 }

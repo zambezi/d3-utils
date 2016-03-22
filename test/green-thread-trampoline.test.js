@@ -4,9 +4,9 @@ define(
   , 'underscore'
   , 'sinon'
   , 'green-thread-trampoline'
-  , 'fun/array/trampoline-filter'
-  , 'fun/array/trampoline-merge-sort'
-  , 'fun/trampoline'
+  , '@zambezi/fun/array/trampoline-filter'
+  , '@zambezi/fun/array/trampoline-merge-sort'
+  , '@zambezi/fun/trampoline'
   ]
 , function(d3, _, sinon, greenThread, filter, sort, trampoline) {
     describe(
