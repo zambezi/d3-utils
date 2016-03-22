@@ -6,7 +6,7 @@ requirejs.config(
   {
       baseUrl: '/base'
     , paths: {
-        'fun': 'node_modules/fun'
+        '@zambezi/fun': 'node_modules/@zambezi/fun'
       , 'Squire': 'node_modules/squirejs/src/Squire'
       , 'd3': 'node_modules/d3/d3'
       , 'd3-utils': 'd3-utils'

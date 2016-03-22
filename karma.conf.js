@@ -29,7 +29,7 @@ module.exports = function(config) {
 
       { pattern: 'node_modules/jquery/dist/jquery.js', included: false, watched: false},
       { pattern: 'node_modules/underscore/underscore.js', included: false, watched: false},
-      { pattern: 'node_modules/fun/**/*.js', included: false, watched: false},
+      { pattern: 'node_modules/@zambezi/fun/**/*.js', included: false, watched: false},
       { pattern: 'node_modules/d3/d3.js', included: false, watched: false},
       { pattern: 'node_modules/karma-sinon-chai/node_modules/sinon/**/*.js', included: false, watched: false},
     ],

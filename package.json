@@ -3,7 +3,6 @@
   "version": "2.9.1",
   "description": "Common utility functions to use with d3",
   "devDependencies": {
-    "fun": "^1.4.0",
     "d3": "^3.5.13",
     "ez-doc": "github:zambezi/ez-doc",
     "jquery": "^2.2.1",
