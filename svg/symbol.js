@@ -1,7 +1,7 @@
 define(
   [ 
     'd3' 
-  , 'fun/multiply'
+  , '@zambezi/fun/multiply'
   ]
 , function(d3, mult) {
 
