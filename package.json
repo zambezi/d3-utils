@@ -17,9 +17,6 @@
     "squirejs": "^0.2.1",
     "underscore": "^1.8.3"
   },
-  "optionalDependencies": {
-    "text": "^2.0.10"
-  },
   "repository": {
     "type": "git",
     "url": "https://git@github.com:zambezi/d3-utils.git"
@@ -29,6 +26,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@zambezi/fun": "1.4.1"
+    "@zambezi/fun": "^1.4.1",
+    "requirejs-text": "^2.0.12"
   }
 }

@@ -12,7 +12,7 @@ requirejs.config(
       , 'd3-utils': 'd3-utils'
       , 'jquery': 'node_modules/jquery/dist/jquery'
       , 'sinon': 'node_modules/karma-sinon-chai/node_modules/sinon/lib/sinon'
-      , 'text': 'node_modules/text/text'
+      , 'text': 'node_modules/requirejs-text/text'
       , 'underscore': 'node_modules/underscore/underscore'
     }
     , shim : {
