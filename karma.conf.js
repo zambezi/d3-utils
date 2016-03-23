@@ -16,8 +16,6 @@ module.exports = function(config) {
     files: [
       'test/test-main.js',
       { pattern: 'test/**/*.js', included: false},
-      { pattern: 'grid/**/*.js', included: false},
-      { pattern: 'test/**/*.css', served: true, watched: true, included: false},
       { pattern: '*.js', included: false},
 
       { pattern: 'component/**/*.js', included: false},
@@ -29,7 +27,11 @@ module.exports = function(config) {
       { pattern: 'selection/**/*.js', included: false},
       { pattern: 'svg/**/*.js', included: false},
 
-      {pattern: '*.css', included: false}
+      { pattern: 'node_modules/jquery/dist/jquery.js', included: false, watched: false},
+      { pattern: 'node_modules/underscore/underscore.js', included: false, watched: false},
+      { pattern: 'node_modules/@zambezi/fun/**/*.js', included: false, watched: false},
+      { pattern: 'node_modules/d3/d3.js', included: false, watched: false},
+      { pattern: 'node_modules/karma-sinon-chai/node_modules/sinon/**/*.js', included: false, watched: false},
     ],
 
     // Turn off HTML preprocessor to allow the 'text' plugin to load html
