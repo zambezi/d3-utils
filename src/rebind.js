@@ -1,4 +1,4 @@
-import _ from 'underscore'
+import { rest } from 'underscore'
 
 export function rebind() {
   const objects = []
@@ -8,7 +8,7 @@ export function rebind() {
   }
 
   rebind.from = function(source) {
-    objects.push({ source, properties: _.rest(arguments) })
+    objects.push({ source, properties: rest(arguments) })
     return rebind
   }
 
