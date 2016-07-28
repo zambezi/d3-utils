@@ -1,5 +1,3 @@
-![Logo](logo.svg?raw=true)
-
 # d3-utils
 
 Assorted utilities for use with [D3].
