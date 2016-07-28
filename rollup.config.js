@@ -5,7 +5,7 @@ export default {
   entry: 'src/index.js',
   dest: 'dist/d3-utils.js',
   format: 'umd',
-  moduleName: 'simpleTable',
+  moduleName: 'd3Utils',
   external: [ 'underscore' ],
   sourceMap: true,
   plugins: [ babel(babelrc()) ],
