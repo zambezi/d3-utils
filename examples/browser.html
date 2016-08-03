@@ -4,9 +4,13 @@
 <style>
 </style>
 <script src="../node_modules/underscore/underscore.js"></script>
+<script src="../node_modules/d3-selection/build/d3-selection.js"></script>
 <script src="../dist/d3-utils.js"></script>
 <script>
 
-  console.log(d3Utils)
+  var append = d3Utils.appendIfMissing('h2.uno.dos.tres')
+
+  d3.select('body').select(append).text('ok uno dos tres')
+
 
 </script>

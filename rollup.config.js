@@ -10,6 +10,7 @@ export default {
   sourceMap: true,
   plugins: [ babel(babelrc()) ],
   globals: {
-    'underscore': '_'
+    'underscore': '_',
+    'd3-selection': 'd3'
   }
 }
