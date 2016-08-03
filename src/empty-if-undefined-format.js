@@ -8,4 +8,4 @@ import { partial, isUndefined } from 'underscore'
 // will create a function that returns an empty string if the provided value
 // is undefined. Otherwise it'll try to parse it using the d3 formatter.
 
-export const emptyIfUndefinedFormat = partial(emptyIf, isUndefined)
+export const emptyIfUndefinedFormat = partial(emptyIfFormat, isUndefined)
