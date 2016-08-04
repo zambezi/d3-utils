@@ -1,6 +1,7 @@
 export { appendFromTemplate }  from './append-from-template'
 export { appendIfMissing }  from './append-if-missing'
 export { call } from './call'
+export { createDispatchCustomEvent } from './dispatch-custom-event'
 export { each } from './each'
 export { emptyIfFormat } from './empty-if-format'
 export { emptyIfUndefinedFormat } from './empty-if-undefined-format'
