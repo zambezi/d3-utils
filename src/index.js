@@ -1,3 +1,4 @@
+export { appendFromTemplate }  from './append-from-template'
 export { appendIfMissing }  from './append-if-missing'
 export { call } from './call'
 export { each } from './each'
