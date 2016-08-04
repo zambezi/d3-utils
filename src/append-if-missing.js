@@ -7,7 +7,7 @@ export function appendIfMissing(tagAndClasses, initAttributes) {
       , selection = target.select(tagAndClasses)
 
     let elements
-      , classes 
+      , classes
       , tag
       , element
 
