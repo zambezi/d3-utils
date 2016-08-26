@@ -1,4 +1,5 @@
 import { select } from 'd3-selection'
+import { first, rest } from 'underscore'
 
 export function appendIfMissing(tagAndClasses, initAttributes) {
 
@@ -14,8 +15,8 @@ export function appendIfMissing(tagAndClasses, initAttributes) {
     if (!selection.empty()) return selection.node()
 
     elements = tagAndClasses.split('.')
-    tag = _.first(elements)
-    classes = _.rest(elements)
+    tag = first(elements)
+    classes = rest(elements)
 
     element = target.append(tag)
 
