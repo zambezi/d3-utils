@@ -1,10 +1,6 @@
 import { rest } from 'underscore'
 import { select } from 'd3-selection'
 import { uniqueId, debounce } from 'underscore'
-import { createDispatchCustomEvent } from './dispatch-custom-event'
-
-const dispatchRedraw = createDispatchCustomEvent().type('redraw')
-    , dispatchSizeDirty = createDispatchCustomEvent().type('size-dirty')
 
 export function createResize() {
   const type = uniqueId('resize.resize_')
@@ -16,8 +12,7 @@ export function createResize() {
     w.on(type, debounce(onWindowResize, wait))
 
     function onWindowResize() {
-      s.each(dispatchSizeDirty)
-          .each(dispatchRedraw)
+      s.dispatch('redraw').dispatch('size-dirty')
     }
   }
 
