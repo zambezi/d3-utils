@@ -11,9 +11,6 @@ export function createAutoDirty() {
     , autoDataDirty = true
 
   function autoDirty(component) {
-
-    console.debug('autoDirty', component)
-
     return function run(s) {
       if (autoSizeDirty) s.dispatch('size-dirty', { bubbles: true })
       if (autoDataDirty) s.dispatch('data-dirty', { bubbles: true })
