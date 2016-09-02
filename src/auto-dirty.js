@@ -1,10 +1,3 @@
-
-
-// Reconfigurable higher-level component, it receives a D3 component, not a
-// selection, and will return a new component that will dispatch 'size-dirty'
-// and 'data-dirty' every time it's run, just before running the original,
-// provided component.
-
 export function createAutoDirty() {
 
   let autoSizeDirty = true
