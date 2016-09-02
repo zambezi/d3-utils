@@ -11,6 +11,7 @@ export default {
   plugins: [ babel(babelrc()) ],
   globals: {
     'underscore': '_',
-    'd3-selection': 'd3'
+    'd3-selection': 'd3',
+    'd3-dispatch': 'd3'
   }
 }
