@@ -12,7 +12,8 @@ export function createResize() {
     w.on(type, debounce(onWindowResize, wait))
 
     function onWindowResize() {
-      s.dispatch('redraw').dispatch('size-dirty')
+      s.dispatch('size-dirty')
+        .dispatch('redraw')
     }
   }
 
