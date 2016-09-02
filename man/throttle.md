@@ -9,7 +9,7 @@ From the underscore documentation:
 
 > [...] throttle will execute the function as soon as you call it for the first time, and, if you call it again any number of times during the wait period, as soon as that period is over.
 
-```
+```javascript
 const throttledComponent = throttle(expensiveComponent)
 
 d3.select('.something').datum(data).call(throttledComponent)
