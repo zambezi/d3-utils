@@ -4,7 +4,7 @@ Allows the consolidation of getter/setter APIs from multiple components for easi
 
 Given the following component factory,
 
-```
+```javascript
 function createComponent() {
   const subcomponentA
       , subcomponentB
@@ -47,4 +47,3 @@ const component = createComponent()
 
 d3.select('.target').datum([1, 2, 3]).call(component)
 ```
-
