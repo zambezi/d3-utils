@@ -4,9 +4,7 @@ Higher order component that receives a not a selection, but a standard 'original
 
 This allows easier component composition.  Whenever any of the composed components needs the composing component to run it needs only to dispatch `redraw` through the DOM.
 
-
-```
-
+```javascript
 function largeComponent(s) {
   s.call(a)
     .call(b)
