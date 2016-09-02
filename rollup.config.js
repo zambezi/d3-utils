@@ -6,7 +6,7 @@ export default {
   dest: 'dist/d3-utils.js',
   format: 'umd',
   moduleName: 'd3Utils',
-  external: [ 'd3-selection', 'underscore' ],
+  external: [ 'd3-selection', 'd3-dispatch', 'underscore' ],
   sourceMap: true,
   plugins: [ babel(babelrc()) ],
   globals: {
