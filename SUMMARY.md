@@ -1,25 +1,27 @@
 Summary
 
-- [append-from-template](man/append-from-template.md)
-- [click-outside](man/click-outside.md)
-- Events
-  - [dispatch](man/events-dispatch.md)
-  - [live](man/events-live.md)
+- D3 selection components
+  - [append-from-template](man/append-from-template.md)
+  - [append-if-missing](man/append-if-missing.md)
+  - [selection-changed](man/selection-changed.md)
+
+- Functional D3 operator wrappers
+  - [call](man/call.md)
+  - [each](man/each.md)
+
+- Component life-cycle
+  - [auto-dirty](man/auto-dirty.md)
+  - [redraw](man/redraw.md)
+  - [throttle](man/throttle.md)
+  - [resize](man/resize.md)
+
 - Formatters
-  - [empty-if-undefined](man/formatters-empty-if-undefined.md)
-- [green-thread-trampoline](man/green-thread-trampoline.md)
-- HTML
-  - [clamp](man/html-clamp.md)
-  - [paragraphs](man/html-paragraphs.md)
-  - [safe-update-input-value](man/html-safe-update-input-value.md)
-  - [simple-keyboard-input-behaviour](man/html-simple-keyboard-input-behaviour.md)
-- Selection
-  - [changed](man/selection-changed.md)
-  - [notify-remove](man/selection-notify-remove.md)
-- [set-content-if-empty](man/set-content-if-empty.md)
-- [set-content-if-missing](man/set-content-if-missing.md)
-- SVG
-  - [radial-tween](man/svg-radial-tween.md)
-- [text-if-changed](man/text-if-changed.md)
-- Transitions
-  - [per-index-delay](man/transitions-per-index-delay.md)
+  - [empty-if-format](man/empty-if-format.md)
+  - [empty-if-undefined-format](man/empty-if-undefined-format.md)
+
+- Event handle wrappers
+  - [event (fromTarget and fromDetail)](man/event.md)
+
+- API consolidation
+  - [rebind](man/rebind.md)
+  - [redispatch](man/redispatch.md)

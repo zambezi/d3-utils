@@ -1,73 +1,55 @@
-## append-from-template `d3-utils/append-from-template`
+## append from template
 
-The d3 selection.append(_name_) operator only supports passing it the name of a tag.
-This can make it very tiresome to build complex html structures.
-
-With `append-from-template` you can create a function from an HTML snippet and use it with the D3 `selection.select` operator to append a node with that markup:
-
-So, to append a node with the following structure in "native" D3,
-
-    <section class="template"><h2>hello</h2><a classed="home-link" href="/home">home</a></section>
-
-You'd need to do
-
-    var section = selection.append("section").classed("template", true)
-    section.append("h2")
-        .text("hello")
-
-    section.append("a")
-        .attr("href", "/home")
-        .text("home")
-        .classed("home-link", true)
-
-    // etc. etc.
+Create a function from an HTML snippet and use it with the D3 `selection.select` operator to append a node with that markup.
 
 Using `append-from-template` you can do:
 
-    var append = appendFromTemplate('<section class="template"><h2>hello</h2><a classed="home-link" href="/home">home</a></section>')
-    section.select(append)
+```javascript
+const append = appendFromTemplate('<section class="template"><h2>hello</h2><a classed="home-link" href="/home">home</a></section>')
+section.select(append)
+```
 
 Each generated node is new so you can use it for creating multiple "renderers"
 
-    var append = appendFromTemplate(yourRendererMarkup)
-    d3.select("ul")
-      .selectAll(".option")
-      .data(yourData)
-      .enter()
-      .select(append)
+```javascript
+const append = appendFromTemplate(yourRendererMarkup)
+d3.select('ul')
+  .selectAll('.option')
+  .data(yourData)
+  .enter()
+  .select(append)
+```
 
-The `append-from-template` is available as an AMD module:
+Also, the new node is returned so it becomes the new selection.
+You can, then, continue operating on it,
 
-    require(
-      [
-        "d3-utils/append-from-template"
-      , "text!./renderer-template.html"
-      ]
-    , function(appendFromTemplate, template) {
-        var append = appendFromTemplate(template)
+```javascript
+selection.select(appened).text('all good').style('color', 'fucsia')
+```
 
-        // ...
+### Rationale
 
-        d3.select("#target").selectAll(".element")
-          .data(someData)
-          .enter()
-          .select(append)
-      }
-    )
+The d3 `selection.append(name)` operator only supports passing it the name of a tag.
+This can make it very tiresome to build complex html structures.
 
-It can also be used as a plugin by passing the path to the template file directly
+To append a node with the following structure in "native" D3,
 
-    require(
-      [
-        "d3-utils/append-from-template!./renderer-template.html"
-      ]
-    , function(append) {
+```html
+<section class="template"><h2>hello</h2><a classed="home-link" href="/home">home</a></section>
+```
 
-        // ...
+You'd need to do
 
-        d3.select("#target").selectAll(".element")
-          .data(someData)
-          .enter()
-          .select(append)
-      }
-    )
+```javascript
+const section = selection.append('section').classed('template', true)
+
+section.append('h2')
+    .text('hello')
+
+section.append('a')
+    .attr('href', '/home')
+    .text('home')
+    .classed('home-link', true)
+
+// etc. etc.
+```

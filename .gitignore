@@ -1,26 +1,3 @@
-# IntelliJ IDEA Files
-.idea
-*.iml
-*.iws
-
-# Maven Files
-target
-
-# HTML / Grunt Files
-output
-.temp
-*-min.js
-*-min.js.map
-*-min.css
-optimised-modules.json
-
-# NPM Files
 node_modules
-*.tgz
-npm-debug.log
-
-# Vim swap files
-.*.sw[g-y]
-
-# Docs
-_book
+dist
+Makefile
