@@ -17,6 +17,7 @@ Summary
   - [auto-dirty](man/auto-dirty.md)
   - [redraw](man/redraw.md)
   - [throttle](man/throttle.md)
+  - [throttle to animation frame](man/throttle-to-animation-frame.md)
   - [resize](man/resize.md)
 
 - Formatters
