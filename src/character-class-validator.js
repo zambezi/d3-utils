@@ -1,41 +1,37 @@
-define(function(require) {
+import { event } from 'd3-selection'
 
-  var d3 = require('d3')
-    , _ = require('underscore')
+export function createCharacterClassValidator() {
 
-  return function createCharacterClassValidator() {
+  let characterClass
+    , validCharacters = regexFromCharacterClass(characterClass)
 
-    var characterClass
-      , validCharacters = regexFromCharacterClass(characterClass)
+  function characterClassValidator() {
+    return characterClassValidator.validate()
+  }
 
-    function characterClassValidator() {
-      return characterClassValidator.validate()
-    }
-
-    characterClassValidator.characterClass = function(value) {
-      if (!arguments.length) return characterClass
-      characterClass = value
-      validCharacters = regexFromCharacterClass(characterClass)
-      return characterClassValidator
-    }
-
-    characterClassValidator.validate = function(d, i) {
-      var charCode
-        , isValidChar
-
-      if (_.isUndefined(characterClass)) return
-
-      charCode = String.fromCharCode(d3.event.which || d3.event.charCode)
-      isValidChar = validCharacters.test(charCode)
-      if (!isValidChar) d3.event.preventDefault()
-    }
-
+  characterClassValidator.characterClass = function(value) {
+    console.debug('characterClassValidator g‡s', value)
+    if (!arguments.length) return characterClass
+    characterClass = value
+    validCharacters = regexFromCharacterClass(characterClass)
     return characterClassValidator
-
   }
 
-  function regexFromCharacterClass(characterClass) {
-    return new RegExp('[' + characterClass + ']')
+  characterClassValidator.validate = function(d, i) {
+    let charCode
+      , isValidChar
+
+    if (typeof(characterClass) == 'undefined') return
+
+    charCode = String.fromCharCode(event.which || event.charCode)
+    isValidChar = validCharacters.test(charCode)
+    if (!isValidChar) event.preventDefault()
   }
 
-})
+  return characterClassValidator
+
+}
+
+function regexFromCharacterClass(characterClass) {
+  return new RegExp('[' + characterClass + ']')
+}
