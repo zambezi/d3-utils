@@ -9,9 +9,7 @@ export function redraw(component) {
     draw()
 
     function draw() {
-      console.group('draw from redraw')
       component.apply(context, [ s, ...args ])
-      console.groupEnd('draw from redraw')
     }
   }
 }

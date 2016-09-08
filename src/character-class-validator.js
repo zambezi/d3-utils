@@ -10,7 +10,6 @@ export function createCharacterClassValidator() {
   }
 
   characterClassValidator.characterClass = function(value) {
-    console.debug('characterClassValidator g‡s', value)
     if (!arguments.length) return characterClass
     characterClass = value
     validCharacters = regexFromCharacterClass(characterClass)
