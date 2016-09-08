@@ -7,7 +7,7 @@ d3.select('input')
     .on('keydown', keyCodeHandler(onCommit, 13))
 ```
 
-It will return `undefined` if the key code doesn't match, so it can be chained using something like Zambezi _Fun!_'s [some result]()
+It will return `undefined` if the key code doesn't match, so it can be chained using something like Zambezi _Fun!_'s [some result](https://github.com/zambezi/fun/blob/master/man/some-result.md)
 
 ```javascript
 d3.select('input')
