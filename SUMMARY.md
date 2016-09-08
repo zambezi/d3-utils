@@ -28,3 +28,4 @@ Summary
 
 - Interaction helpers
   - [key code handler](man/key-code-handler.md)
+  - [character class validator](man/character-class-validator.md)
