@@ -5,6 +5,10 @@ Summary
   - [append-if-missing](man/append-if-missing.md)
   - [selection-changed](man/selection-changed.md)
 
+- API consolidation
+  - [rebind](man/rebind.md)
+  - [redispatch](man/redispatch.md)
+
 - Functional D3 operator wrappers
   - [call](man/call.md)
   - [each](man/each.md)
@@ -13,6 +17,7 @@ Summary
   - [auto-dirty](man/auto-dirty.md)
   - [redraw](man/redraw.md)
   - [throttle](man/throttle.md)
+  - [throttle to animation frame](man/throttle-to-animation-frame.md)
   - [resize](man/resize.md)
 
 - Formatters
@@ -22,6 +27,6 @@ Summary
 - Event handle wrappers
   - [event (fromTarget and fromDetail)](man/event.md)
 
-- API consolidation
-  - [rebind](man/rebind.md)
-  - [redispatch](man/redispatch.md)
+- Interaction helpers
+  - [key code handler](man/key-code-handler.md)
+  - [character class validator](man/character-class-validator.md)
