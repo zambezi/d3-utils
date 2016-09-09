@@ -26,6 +26,7 @@ Summary
 
 - Event handle wrappers
   - [event (fromTarget and fromDetail)](man/event.md)
+  - [forward](man/forward.md)
 
 - Interaction helpers
   - [key code handler](man/key-code-handler.md)
