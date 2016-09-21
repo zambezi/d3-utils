@@ -19,6 +19,7 @@ Summary
   - [throttle](man/throttle.md)
   - [throttle to animation frame](man/throttle-to-animation-frame.md)
   - [resize](man/resize.md)
+  - [skip when hidden](man/skip-when-hidden.md)
 
 - Formatters
   - [empty-if-format](man/empty-if-format.md)
