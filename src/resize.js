@@ -9,6 +9,7 @@ export function createResize() {
   let wait = 300
 
   function resize(s) {
+    s.on('destroy.resize', () => w.on(type, null))
     w.on(type, debounce(onWindowResize, wait))
 
     function onWindowResize() {
