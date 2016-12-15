@@ -47,4 +47,20 @@ describe('redispatch', () => {
 
   })
 
+  it('should support redispatching the same event from multiple sources', () => {
+    const dispatcher1 = createDispatcher('a')
+        , dispatcher2 = createDispatcher('a')
+        , forward = redispatch()
+              .from(dispatcher1, 'a')
+              .from(dispatcher2, 'a')
+              ()
+
+    forward.on('a', e => strictEqual(e, 1))
+    dispatcher1.call('a', {}, 1)
+
+    forward.on('a', e => strictEqual(e, 2))
+    dispatcher2.call('a', {}, 2)
+
+  })
+
 })
