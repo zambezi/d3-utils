@@ -1,5 +1,6 @@
 import { dispatch as createDispatch } from 'd3-dispatch'
 import { createResize } from './rebind'
+import { unique } from 'underscore'
 
 export function redispatch() {
   const dispatchers = []
@@ -18,7 +19,10 @@ export function redispatch() {
   }
 
   redispatch.create = () => {
-    const dispatch = createDispatch.apply(null, dispatchers.reduce(types, []))
+    const dispatch = createDispatch.apply(
+            null
+          , unique(dispatchers.reduce(types, []))
+          )
 
     dispatchers.forEach(proxyEvents)
     return dispatch
