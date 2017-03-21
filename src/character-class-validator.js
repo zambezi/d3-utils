@@ -1,26 +1,25 @@
 import { event } from 'd3-selection'
 
-export function createCharacterClassValidator() {
-
+export function createCharacterClassValidator () {
   let characterClass
-    , validCharacters = regexFromCharacterClass(characterClass)
+  let validCharacters = regexFromCharacterClass(characterClass)
 
-  function characterClassValidator() {
+  function characterClassValidator () {
     return characterClassValidator.validate()
   }
 
-  characterClassValidator.characterClass = function(value) {
+  characterClassValidator.characterClass = function (value) {
     if (!arguments.length) return characterClass
     characterClass = value
     validCharacters = regexFromCharacterClass(characterClass)
     return characterClassValidator
   }
 
-  characterClassValidator.validate = function(d, i) {
-    let charCode
-      , isValidChar
+  characterClassValidator.validate = function (d, i) {
+    let charCode,
+      isValidChar
 
-    if (typeof(characterClass) == 'undefined') return
+    if (typeof (characterClass) === 'undefined') return
 
     charCode = String.fromCharCode(event.which || event.charCode)
     isValidChar = validCharacters.test(charCode)
@@ -28,9 +27,8 @@ export function createCharacterClassValidator() {
   }
 
   return characterClassValidator
-
 }
 
-function regexFromCharacterClass(characterClass) {
+function regexFromCharacterClass (characterClass) {
   return new RegExp('[' + characterClass + ']')
 }

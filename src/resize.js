@@ -1,24 +1,23 @@
-import { rest } from 'underscore'
 import { select } from 'd3-selection'
 import { uniqueId, debounce } from 'underscore'
 
-export function createResize() {
+export function createResize () {
   const type = uniqueId('resize.resize_')
-      , w  = select(window)
+  const w = select(window)
 
   let wait = 300
 
-  function resize(s) {
+  function resize (s) {
     s.on('destroy.resize', () => w.on(type, null))
     w.on(type, debounce(onWindowResize, wait))
 
-    function onWindowResize() {
+    function onWindowResize () {
       s.dispatch('size-dirty')
         .dispatch('redraw')
     }
   }
 
-  resize.wait = function(value) {
+  resize.wait = function (value) {
     if (!arguments.length) return wait
     wait = value
     return resize

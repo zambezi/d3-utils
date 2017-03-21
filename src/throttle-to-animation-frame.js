@@ -1,16 +1,15 @@
-export function throttleToAnimationFrame(component) {
-
+export function throttleToAnimationFrame (component) {
   let requestId
 
-  return function run() {
+  return function run () {
     const context = this
-        , args = arguments
+    const args = arguments
 
     if (requestId) return
 
     requestId = window.requestAnimationFrame(execute)
 
-    function execute() {
+    function execute () {
       component.apply(context, args)
       requestId = null
     }
