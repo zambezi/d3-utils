@@ -1,5 +1,5 @@
-export { appendFromTemplate }  from './append-from-template'
-export { appendIfMissing }  from './append-if-missing'
+export { appendFromTemplate } from './append-from-template'
+export { appendIfMissing } from './append-if-missing'
 export { call } from './call'
 export { createAutoDirty } from './auto-dirty'
 export { createCharacterClassValidator } from './character-class-validator'

@@ -1,16 +1,15 @@
 import { select } from 'd3-selection'
 import { first, rest } from 'underscore'
 
-export function appendIfMissing(tagAndClasses, initAttributes) {
-
-  return function append(d, i) {
+export function appendIfMissing (tagAndClasses, initAttributes) {
+  return function append (d, i) {
     const target = select(this)
-      , selection = target.select(tagAndClasses)
+    const selection = target.select(tagAndClasses)
 
     let elements
-      , classes
-      , tag
-      , element
+    let classes
+    let tag
+    let element
 
     if (!selection.empty()) return selection.node()
 
@@ -25,5 +24,4 @@ export function appendIfMissing(tagAndClasses, initAttributes) {
 
     return element.node()
   }
-
 }

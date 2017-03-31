@@ -1,11 +1,10 @@
 import { dispatch as createDispatch } from 'd3-dispatch'
-import { createResize } from './rebind'
 import { unique } from 'underscore'
 
-export function redispatch() {
+export function redispatch () {
   const dispatchers = []
 
-  function redispatch() {
+  function redispatch () {
     return redispatch.create()
   }
 
@@ -27,11 +26,11 @@ export function redispatch() {
     dispatchers.forEach(proxyEvents)
     return dispatch
 
-    function proxyEvents(d) {
+    function proxyEvents (d) {
       d.types.forEach(proxyEvent)
-      function proxyEvent(type) {
+      function proxyEvent (type) {
         d.dispatcher.on(`${type}.redispatcher`, forward)
-        function forward() {
+        function forward () {
           dispatch.apply(type, this, arguments)
         }
       }
@@ -40,12 +39,11 @@ export function redispatch() {
 
   return redispatch
 
-  function types(acc, next) {
+  function types (acc, next) {
     return acc.concat(next.types)
   }
 
-  function toTypes(acc, v, k) {
+  function toTypes (acc, v, k) {
     return acc.concat(v.types)
   }
-
 }
