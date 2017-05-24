@@ -1,5 +1,5 @@
 import { dispatch as createDispatch } from 'd3-dispatch'
-import { unique } from 'underscore'
+import { unique, uniqueId } from 'underscore'
 
 export function redispatch () {
   const dispatchers = []
@@ -29,7 +29,7 @@ export function redispatch () {
     function proxyEvents (d) {
       d.types.forEach(proxyEvent)
       function proxyEvent (type) {
-        d.dispatcher.on(`${type}.redispatcher`, forward)
+        d.dispatcher.on(`${type}.redispatcher.${uniqueId()}`, forward)
         function forward () {
           dispatch.apply(type, this, arguments)
         }
