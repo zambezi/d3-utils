@@ -1,6 +1,7 @@
 export { appendFromTemplate } from './append-from-template'
 export { appendIfMissing } from './append-if-missing'
 export { call } from './call'
+export { createAntiDogpileJson } from './anti-dogpile-json'
 export { createAutoDirty } from './auto-dirty'
 export { createCharacterClassValidator } from './character-class-validator'
 export { createResize } from './resize'

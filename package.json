@@ -15,7 +15,9 @@
     "prepublish": "npm test"
   },
   "standard": {
-    "env": [ "mocha" ]
+    "env": [
+      "mocha"
+    ]
   },
   "license": "MIT",
   "main": "dist/d3-utils.js",
@@ -39,6 +41,7 @@
   },
   "dependencies": {
     "d3-dispatch": "^1.0.1",
+    "d3-request": "^1.0.5",
     "d3-selection": "^1.0.2",
     "underscore": "^1.8.3"
   }
